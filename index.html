@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABCars</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav__container--logo">
+        <h1>ABCars</h1>
+        <div class="nav__container--speech">
+          <img src="images/flag-usa.png" alt="drapeau des usa" />
+          <p>EN</p>
+          <img src="images/arrow-down.svg" alt="" />
+
+          <div class="tooltip--language">
+            <img src="images/flag-french.png" alt="drapeau des usa" />
+            <p>FR</p>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <a href="#">Home</a>
+        <a class="active" href="#">Advantage Search</a>
+        <a href="#">Shop New Cars</a>
+        <a href="#">Reviews & Advice</a>
+        <a href="#">What's My Car Worth?</a>
+      </ul>
+
+      <div class="nav__container--btn">
+        <a href="#" class="btn">Login</a>
+        <a href="#" class="btn btn--primary">Sign up</a>
+      </div>
+
+      <div class="menu-burger">
+        <img src="images/icon-hamburger.svg" alt="" />
+      </div>
+    </nav>
+
+    <div class="inner">
+      <main id="main">
+        <nav class="main__nav">
+          <p>Search</p>
+          <img src="images/arrow-left.svg" alt="logo fleche" />
+          <p>Mercedes</p>
+          <img src="images/arrow-left.svg" alt="logo fleche" />
+          <p class="active">Vehicle Details</p>
+        </nav>
+
+        <div class="main__container--slider">
+          <div class="slider">
+            <img
+              class="slide active-slide"
+              src="images/slider-img-1.jpg"
+              alt="voiture amg"
+            />
+            <img
+              class="slide"
+              src="images/slider-img-2.jpg"
+              alt="intérieur amg"
+            />
+            <img
+              class="slide"
+              src="images/slider-img-3.jpg"
+              alt="intérieur amg"
+            />
+            <img
+              class="slide"
+              src="images/slider-img-4.jpg"
+              alt="intérieur amg"
+            />
+            <img
+              class="slide"
+              src="images/slider-img-5.jpg"
+              alt="intérieur amg"
+            />
+            <div class="slider__container--btn">
+              <img
+                class="btn-prev"
+                src="images/slider-arrow-left.svg"
+                alt="logo fleche slider"
+              />
+              <img
+                class="btn-next"
+                src="images/slider-arrow-right.svg"
+                alt="logo fleche slider"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="slider--thumbnail">
+          <img
+            class="active"
+            src="images/slider-img-1.jpg"
+            alt="intérieur amg"
+            data-thumb="1"
+          />
+          <img
+            data-thumb="2"
+            src="images/slider-img-2.jpg"
+            alt="intérieur amg"
+          />
+          <img
+            data-thumb="3"
+            src="images/slider-img-3.jpg"
+            alt="intérieur amg"
+          />
+          <img
+            data-thumb="4"
+            src="images/slider-img-4.jpg"
+            alt="intérieur amg"
+          />
+          <img
+            data-thumb="5"
+            src="images/slider-img-5.jpg"
+            alt="intérieur amg"
+          />
+        </div>
+
+        <div class="main__container--specifications">
+          <h3 class="title--h3">Vehicle Specifications</h3>
+          <div class="specifications__container">
+            <div class="specification">
+              <p class="p">Design & cylinders</p>
+              <span>Twin-tubrochared boxer 6</span>
+            </div>
+            <div class="specification">
+              <p class="p">Acceleration</p>
+              <span>3.5 sec</span>
+            </div>
+            <div class="specification">
+              <p class="p">Engine</p>
+              <span>3.0L</span>
+            </div>
+            <div class="specification">
+              <p class="p">Top Speed</p>
+              <span>190 mph</span>
+            </div>
+            <div class="specification">
+              <p class="p">Width</p>
+              <span>72.9 in</span>
+            </div>
+            <div class="specification">
+              <p class="p">Fuel tank</p>
+              <span>17.6 gal</span>
+            </div>
+            <div class="specification">
+              <p class="p">Length</p>
+              <span>177.9</span>
+            </div>
+            <div class="specification">
+              <p class="p">Dealers Location</p>
+              <span>Torronto, Canada</span>
+            </div>
+          </div>
+          <button class="btn--small">Show more</button>
+        </div>
+
+        <div class="main__container--dealer">
+          <h3 class="title--h3">Contact the Dealer</h3>
+
+          <form class="form__dealer">
+            <div class="form-control">
+              <label class="p" for="name">First Name</label>
+              <input type="text" id="name" />
+            </div>
+            <div class="form-control">
+              <label class="p" for="lastName">Last Name</label>
+              <input type="text" id="lastName" />
+            </div>
+            <div class="form-control">
+              <label class="p" for="street">Street</label>
+              <input type="text" id="street" />
+            </div>
+            <div class="form-control">
+              <label class="p" for="city">City</label>
+              <input type="text" id="city" />
+            </div>
+            <div class="form-control">
+              <label class="p" for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <button class="btn--small btn--green">Send Now</button>
+          </form>
+        </div>
+      </main>
+
+      <aside id="aside">
+        <div class="aside__container--price">
+          <h2 class="title--h2">
+            Mercedes-Benz C63 2017 <span>(290 Views)</span>
+          </h2>
+          <div class="price--specifications">
+            <div class="price-specification">Coupe</div>
+            <div class="price-specification">New Vehicle</div>
+            <div class="price-specification">Buy Now</div>
+            <div class="price-specification">Brand Offer</div>
+          </div>
+          <h4>Lorem ipsum dolor</h4>
+          <p class="p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat,
+            inventore quibusdam! Laudantium dolore veritatis, officia molestias
+            saepe cupiditate reprehenderit recusandae quod excepturi autem porro
+            natus optio voluptatum error beatae aut? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Inventore, nemo eveniet quibusdam
+            natus corrupti cum hic optio expedita asperiores in at neque,
+            aliquam repudiandae debitis sapiente, blanditiis similique dolore
+            id!
+          </p>
+          <button class="btn--small">$ 43,938.87</button>
+          <button class="btn--small btn--green">Car Fax</button>
+        </div>
+
+        <div class="aside__container--certif box--asides">
+          <div class="certif__container--logo">
+            <img class="logo-gnl" src="images/logo-gnl.png" alt="logo gnl" />
+            <span>Certified Dealer</span>
+            <div class="content-stars">
+              <img src="images/icon-star.svg" alt="icon d'une étoile" />
+              <img src="images/icon-star.svg" alt="icon d'une étoile" />
+              <img src="images/icon-star.svg" alt="icon d'une étoile" />
+              <img src="images/icon-star.svg" alt="icon d'une étoile" />
+              <img src="images/icon-star.svg" alt="icon d'une étoile" />
+            </div>
+            <span>41 km away in Oakville, ON</span>
+          </div>
+          <p class="p">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
+            sunt incidunt natus eos perspiciatis quidem tenetur architecto iure
+            repudiandae...
+          </p>
+          <button class="btn--small">Show more</button>
+        </div>
+
+        <div class="aside__container--finance box--asides">
+          <h2 class="title--h2">Purchase & Finance Calculator</h2>
+          <div class="finance__container">
+            <form class="form__finance">
+              <div class="form-control">
+                <label class="p" for="price">Car Price</label>
+                <input type="range" id="price" value="70" />
+                <input type="text" value="$151.500" />
+              </div>
+              <div class="form-control">
+                <label class="p" for="price">Down Payment</label>
+                <input type="range" id="price" value="70" />
+                <input type="text" value="$151.500" />
+              </div>
+              <div class="form-control">
+                <label class="p" for="price">Loan Type</label>
+                <input type="range" id="price" value="70" />
+                <input type="number" value="5" />
+              </div>
+
+              <button class="btn--small btn--green">Calculate now</button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

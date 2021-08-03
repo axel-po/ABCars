@@ -1,0 +1,561 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f5f6f8;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 26px;
+  width: 90%;
+  margin: auto;
+  max-width: 1400px;
+}
+
+@media screen and (max-width: 1300px) {
+  .inner {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}
+
+/* Buttons */
+.btn {
+  padding: 15px 25px;
+  border: 1px solid #e1e8ee;
+  color: #384555;
+  border-radius: 9px;
+}
+
+.btn--primary {
+  background-color: #249af2;
+  color: white;
+}
+
+.btn--small {
+  display: block;
+  border: 0;
+  border-radius: 9px;
+  color: #384555;
+  height: 48px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.btn--small:focus {
+  outline: 0;
+}
+
+.btn--green {
+  background-color: #16d762;
+  color: #fff;
+}
+
+/* Titles */
+.title--h2 {
+  font-size: 24px;
+  color: #384653;
+}
+
+.title--h3 {
+  font-size: 20px;
+  color: #384653;
+}
+
+/* Paragraphes */
+.p {
+  font-size: 16px;
+  color: #7f90a4;
+}
+
+/* Boxs Aside */
+.box--asides {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 9px;
+}
+
+/* NAV */
+#nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 80px;
+  padding: 0 35px;
+  width: 100%;
+  z-index: 99999999;
+}
+
+.nav__container--logo {
+  display: flex;
+}
+
+.nav__container--logo h1 {
+  color: #354553;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.nav__container--speech {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-left: 1px solid #e1e8ee;
+  position: relative;
+}
+
+.nav__container--speech img {
+  border-radius: 2px;
+  margin: 0 10px;
+}
+
+.tooltip--language {
+  position: absolute;
+  background: white;
+  top: 37px;
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  width: 100%;
+  border-radius: 3px;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.tooltip--language.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  color: #919eb1;
+  margin: 0 15px;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  color: #364655;
+  position: relative;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  background: #249af2;
+  width: 100%;
+  height: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.nav__container--btn .btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu-burger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1248px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    min-width: 300px;
+    z-index: 9999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 30px 0;
+  }
+
+  .nav-links a.active {
+    height: auto;
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  .nav__container--btn {
+    display: none;
+  }
+
+  .menu-burger {
+    display: block;
+    z-index: 9999;
+  }
+}
+
+/* MAIN */
+#main {
+  margin: 79px 0 40px;
+  /* max-width: 960px; */
+}
+
+/* Main nav */
+.main__nav {
+  display: flex;
+  align-items: center;
+  color: #7f90a2;
+  margin: 30px 0;
+}
+
+.main__nav p {
+  cursor: pointer;
+}
+
+.main__nav img {
+  margin: 0 15px;
+  width: 17px;
+}
+
+.main__nav .active {
+  color: #249af2;
+}
+
+/* Main slider */
+.main__container--slider {
+  position: relative;
+  height: 520px;
+  width: 100%;
+}
+
+.main__container--slider img {
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+.main__container--slider .slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.active-slide {
+  opacity: 1 !important;
+}
+
+.slider__container--btn img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  cursor: pointer;
+}
+
+.slider__container--btn img:nth-child(1) {
+  left: 15px;
+}
+
+.slider__container--btn img:nth-child(2) {
+  right: 15px;
+}
+
+.slider--thumbnail {
+  display: flex;
+  /* justify-content: space-between; */
+  background-color: #fff;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.slider--thumbnail img {
+  width: 161px;
+  margin: 10px auto;
+  height: 108px;
+  border-radius: 9px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+.slider--thumbnail img.active {
+  border: 3px solid #249af2;
+}
+
+@media screen and (max-width: 570px) {
+  .main__container--slider {
+    height: 226px;
+  }
+
+  .slider--thumbnail img {
+    width: 141px;
+    height: 94px;
+  }
+}
+
+/* Main Vehicle Specifications */
+.main__container--specifications {
+  background: #fff;
+  padding: 20px;
+}
+
+.specifications__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 65px);
+  margin-top: 15px;
+  grid-column-gap: 30px;
+}
+
+.specification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #e1e8ee;
+}
+
+.specification span {
+  color: #384555;
+}
+
+.main__container--specifications button {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 813px) {
+  .specification {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .specifications__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 65px);
+  }
+}
+
+/* Main Contact Dealer */
+.main__container--dealer {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.form__dealer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, max-content);
+  grid-gap: 15px;
+  margin-top: 50px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  margin-bottom: 15px;
+}
+
+.form-control input[type="text"],
+input[type="number"],
+textarea {
+  background-color: #fff;
+  border: 1px solid #e1e8ee;
+  border-radius: 7px;
+  padding: 12px;
+  font-size: 16px;
+  color: #354552;
+  font-family: "Lato", sans-serif;
+}
+
+.form-control input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+.form-control:nth-child(5) {
+  grid-column: 1/-1;
+}
+
+.form-control textarea {
+  height: 180px;
+  max-width: 920px;
+  resize: none;
+}
+
+.form__dealer button {
+  grid-column: 1/-1;
+}
+
+@media screen and (max-width: 615px) {
+  .form__dealer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ASIDE */
+#aside {
+  width: 100%;
+  width: 491px;
+  margin: 159px 0 40px;
+}
+
+.aside__container--price {
+  background-color: #fff;
+  padding: 25px;
+  height: 520px;
+  border-radius: 9px;
+}
+
+.aside__container--price h2 span {
+  color: #bfc7d2;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.price--specifications {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.price-specification {
+  background-color: #f3f4f6;
+  color: #384653;
+  border-radius: 7px;
+  margin: 20px 5px 25px;
+  padding: 5px 10px;
+}
+
+.price-specification:nth-child(1) {
+  margin-left: 0;
+}
+
+.aside__container--price h4 {
+  font-size: 18px;
+  color: #249af4;
+}
+
+.aside__container--price p {
+  line-height: 23px;
+  margin: 20px 0;
+}
+
+.aside__container--price .btn--small:not(.btn--green) {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 549px) {
+  .price-specification {
+    margin: 5px 5px 10px;
+  }
+}
+/* Aside Section Certif */
+.aside__container--certif {
+  display: flex;
+  flex-direction: column;
+}
+
+.certif__container--logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-gnl {
+  width: 145px;
+}
+
+.certif__container--logo span {
+  font-size: 9px;
+  color: #6a747e;
+}
+
+.aside__container--certif p {
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+
+/* Aside Part Purchase & Finance */
+.aside__container--finance h2 {
+  margin-bottom: 10px;
+}
+
+.form__finance .form-control label {
+  margin: 15px 0;
+}
+
+.form__finance .form-control input[type="text"],
+input[type="number"] {
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 1300px) {
+  #aside {
+    margin: 0 0 40px;
+    width: 100%;
+  }
+
+  .aside__container--price {
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .box--asides {
+    border-radius: 0;
+  }
+}
